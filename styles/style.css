@@ -1,0 +1,179 @@
+
+/* MAIN */
+.wrapper { /* сделал блок в блоке и задал ему такую ширину чтобы его базовая точка была сдвинута на 58% и сделал одинаковый отсту для всех сблоков в блоке */
+    width: 58%;
+}
+
+.wrapper,
+.primary {
+    margin: 0 auto; /* выравнял по центру блоки */
+}
+
+/* HEADER */
+
+.header {
+    padding: 79px 0 141px; /* внутрений отступ для хедера */
+}
+
+.menu-wrap {
+    margin-bottom: 6.5%; /* внешний отступ снизу для всего меню */
+}
+/*  */
+.menu {
+    font-size: 0; /* выставил размер шрифта 0 */
+    height: 79px; /* высота блока меню */
+}
+
+.menu__item {
+    display: inline-block;
+    font-size: 1rem; /* выставил стандартный размер шрифта чтобы убрать пробелы между линками в блоке */
+    margin-right: 3.8%;
+}
+
+.menu__link {
+    text-transform: uppercase; 
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400; /* жирность шрифта задал */
+}
+
+.menu__link--current {
+    color: #34547A;
+}
+
+.menu__link:hover {
+    color: #ff6600; /* изменение цвета текста при наведении */
+}
+
+/* HEADER > HERO */
+.hero,
+.work {
+    background-color: #EEEFF1;
+}
+
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: 6%;
+    padding-top: 81px; /* внутрений отступ сверху */
+    font-weight: 500; /* жирность шрифта */
+}
+
+.hero__title,
+.footer__text,
+.footer__info,
+.hero__btn-wrap,
+.menu {
+    padding-left: 19%; /* сместил все внутрение элементы в блоках. СЕРГЕЙ я не уверен, правильно ли я тут поступил. но мне показалось, чтобы таким образом относительное опзиционирование внутрених жлементов будет более корректным*/
+}
+
+.hero__text {
+    margin-left: 19%;
+}
+
+.hero__text,
+.about__text,
+.work__text {
+    line-height: 1.3rem;
+    color: #727272;
+}
+
+.hero__btn {
+    display: inline-block;
+    padding: 20px 41px;
+    background: #34547A;
+    transition: all .8s; /* плавное изменение цвета после убирания наведения на элемент. как бывозврадение в обычное состояние */
+    margin: 6% 0;
+    text-decoration: none;
+    text-transform: uppercase; /* все слова с большой буквы */
+}
+
+.hero__btn:hover {
+    background: #24a545;
+    transition: all .8s; /* плавное изменение цвета при наведении на кнопку */
+}
+
+.primary {
+    width: 49%;
+}
+
+.about>.wrapper,
+.work>.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__title {
+    display: none; /* спрятал заголовок. он отстутствует в макете, но по семантике он должен быть для большей валидизации */
+}
+
+/* PROJECTS */
+.projects,
+.footer {
+    background: #34547A;
+}
+
+.projects__item {
+    margin: 50px 0 50px 0; /* задал фиксированый отступ чтобы соотвествовать макету. поэтому указала конкретное значение */
+    font-size: 1.3rem;
+}
+
+.projects__img {
+    padding-right: 20px;
+}
+
+.projects__wrap,
+.projects__item {
+    display: flex;
+}
+
+.projects__wrap {
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.work__title {
+    margin: 100px 0 50px 0;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.work__text{
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.projects__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* WORK */
+
+.video {
+    width: 100%;
+    height: 600px;
+    padding-bottom: 100px;
+}
+
+/* FOOTER */
+.footer,
+.projects__item,
+.hero__btn {
+    color: white;
+}
+
+.footer__text {
+    padding-top: 50px;
+}
+
+.footer__info {
+    padding-bottom: 50px;
+}
+
+.footer__info,
+.footer__text {
+    line-height: 1.3rem;
+}
