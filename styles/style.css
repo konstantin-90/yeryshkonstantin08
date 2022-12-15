@@ -12,7 +12,8 @@
 /* HEADER */
 
 .header {
-    padding: 79px 0 141px; /* внутрений отступ для хедера */
+    padding: 79px 0 141px 0; /* внутрений отступ для хедера */
+    background-color: #EEEFF1;
 }
 
 .menu-wrap {
@@ -20,14 +21,8 @@
 }
 /*  */
 .menu {
-    font-size: 0; /* выставил размер шрифта 0 */
-    height: 79px; /* высота блока меню */
-}
-
-.menu__item {
-    display: inline-block;
-    font-size: 1rem; /* выставил стандартный размер шрифта чтобы убрать пробелы между линками в блоке */
-    margin-right: 3.8%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu__link {
@@ -46,7 +41,6 @@
 }
 
 /* HEADER > HERO */
-.hero,
 .work {
     background-color: #EEEFF1;
 }
@@ -56,18 +50,6 @@
     margin-bottom: 6%;
     padding-top: 81px; /* внутрений отступ сверху */
     font-weight: 500; /* жирность шрифта */
-}
-
-.hero__title,
-.footer__text,
-.footer__info,
-.hero__btn-wrap,
-.menu {
-    padding-left: 19%; /* сместил все внутрение элементы в блоках. СЕРГЕЙ я не уверен, правильно ли я тут поступил. но мне показалось, чтобы таким образом относительное опзиционирование внутрених жлементов будет более корректным*/
-}
-
-.hero__text {
-    margin-left: 19%;
 }
 
 .hero__text,
@@ -82,7 +64,7 @@
     padding: 20px 41px;
     background: #34547A;
     transition: all .8s; /* плавное изменение цвета после убирания наведения на элемент. как бывозврадение в обычное состояние */
-    margin: 6% 0;
+    margin: 65px 0 141px 0;
     text-decoration: none;
     text-transform: uppercase; /* все слова с большой буквы */
 }
@@ -92,8 +74,9 @@
     transition: all .8s; /* плавное изменение цвета при наведении на кнопку */
 }
 
-.primary {
+.content {
     width: 49%;
+    margin: 0 auto;
 }
 
 .about>.wrapper,
@@ -104,7 +87,7 @@
 }
 
 .about__title {
-    display: none; /* спрятал заголовок. он отстутствует в макете, но по семантике он должен быть для большей валидизации */
+    text-align: center;
 }
 
 /* PROJECTS */
@@ -116,23 +99,28 @@
 .projects__item {
     margin: 50px 0 50px 0; /* задал фиксированый отступ чтобы соотвествовать макету. поэтому указала конкретное значение */
     font-size: 1.3rem;
+    width: 7%;
 }
 
-.projects__img {
-    padding-right: 20px;
+.projects__img-wrap {
+    display: block;
+    padding-right: 1%;
 }
 
-.projects__wrap,
 .projects__item {
     display: flex;
+    justify-content: space-between;
+    column-gap: 15%;
 }
 
 .projects__wrap {
+    display: flex;
     justify-content: space-between;
     margin-top: 100px;
 }
 
-.work__title {
+.work__title,
+.about__title {
     margin: 100px 0 50px 0;
     font-size: 3rem;
     font-weight: 500;
@@ -147,7 +135,7 @@
 .projects__description {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* WORK */
